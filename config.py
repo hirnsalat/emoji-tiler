@@ -1,4 +1,4 @@
-color = "#00ff00"
+color = "#895e98"
 rows = 10
 cols = 10
 size = 72

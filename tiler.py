@@ -12,7 +12,7 @@ def fetchparts(indir):
     return [x.read_text() for x in indir.iterdir()]
 
 def generate(grid, parts):
-    res = f"""<svg id="emoji" viewBox="0 0 {grid.width} {grid.height}" xmlns="http://www.w3.org/2000/svg" fill="{config.color}">\n"""
+    res = f"""<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n<svg id="emoji" viewBox="0 0 {grid.width} {grid.height}" xmlns="http://www.w3.org/2000/svg" fill="{config.color}">\n"""
     for x,y in grid:
         res += appendpart(x, y, random.choice(parts))
     res += "</svg>\n"
