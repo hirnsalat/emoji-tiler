@@ -24,5 +24,5 @@ if __name__ == "__main__":
     parts = fetchparts(pathlib.Path("imported"))
     
     for i in range(100):
-        with open(f"test/tile{i}.svg", "w") as outfile:
+        with open(f"test/tile{i:03}.svg", "w") as outfile:
             outfile.write(generate(grid, parts))
